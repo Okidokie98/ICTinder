@@ -9,7 +9,7 @@
 @stop
 
 @section('content')
-    <p>Welcome to this beautiful admin panel.</p>
+    <p>Welcome to this beautiful godzilla.</p>
 @stop
 
 @section('css')
