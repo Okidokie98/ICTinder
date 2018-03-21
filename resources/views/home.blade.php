@@ -3,9 +3,9 @@
 @section('title', 'profile')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+    <h1>Profile</h1>
 @stop
 
 @section('content')
-    <p>You are logged in!</p>
+    <p>You are logged in!, This is where your profile is supposed to be</p>
 @stop
