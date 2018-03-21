@@ -15,8 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::get('/overview', function () {
     return view('overview');
+});
+
+Route::get('/createbutton', function () {
+    return view('createbutton');
 });
 
 Route::get('/chat', function () {
