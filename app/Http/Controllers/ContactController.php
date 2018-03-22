@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Mail\Contact;
 
 class ContactController extends Controller
 {
@@ -11,10 +12,11 @@ class ContactController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    // public function index()
-    // {
-    //     return view('contact.index');
-    // }
+    public function index()
+    {
+        // return view('contact.index');
+        return view('contact.create');
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -34,7 +36,19 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        
+        $contact = [];
+
+    $contact['name'] = $request->get('name');
+    $contact['email'] = $request->get('email');
+    $contact['msg'] = $request->get('msg');
+
+    // Mail delivery logic goes here
+
+    flash('Your message has been sent!')->success();
+
+    
+
+    return redirect()->route('contact.create');
     }
 
     /**

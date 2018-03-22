@@ -4,19 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Test</title>
 </head>
 <body>
-    <h1>Welcome to ICTinder!</h1>
-    <div>
-    Hi,
-
-A HackerPair user has sent you a message.
-
-Name: {{ $contact['name'] }}
-
-E-mail: {{ $contact['email'] }}
-
-Message: {{ $contact['msg'] }}</div>
+    <h1>Waarom wordt deze wel gevonden maar mijn create.blade.php niet?</h1>
 </body>
 </html>
