@@ -15,7 +15,7 @@ class ContactController extends Controller
     public function index()
     {
         // return view('contact.index');
-        return view('contact.create');
+        // return view('contact.create');
     }
 
     /**
@@ -48,7 +48,10 @@ class ContactController extends Controller
 
     
 
-    return redirect()->route('contact.create');
+    return redirect('/');
+
+    Mail::to(config('mail.support.address'))->send(new Contact($contact));
+
     }
 
     /**

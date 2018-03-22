@@ -22,6 +22,7 @@
 </div>
 
 <div class="form-group">
+    {!! Form::label('msg', 'Type your question or bug-report here:') !!}
     {!! Form::textarea('msg', null, ['class' => 'form-control']) !!}
 </div>
 
