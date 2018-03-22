@@ -11,10 +11,10 @@ class ContactController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        return view('contact.index');
-    }
+    // public function index()
+    // {
+    //     return view('contact.index');
+    // }
 
     /**
      * Show the form for creating a new resource.
@@ -23,7 +23,7 @@ class ContactController extends Controller
      */
     public function create()
     {
-        //
+        return view('contact.create');
     }
 
     /**
@@ -34,7 +34,7 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
