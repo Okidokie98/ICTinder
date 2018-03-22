@@ -28,6 +28,7 @@ header{
     display: inline-block;
     background-color: #3c8dbc;
     width: 15%;
+    padding: 1px;
 }
 .logo{
     padding-left: 25;
