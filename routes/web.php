@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 
+
 Route::get('/overview', function () {
 
     $chats = [
@@ -37,8 +38,16 @@ Route::get('/createbutton', function () {
 
 Route::get('/chat', function () {
     return view('chat');
+
+Route::get('/contactUS', function () {
+    return view('create');
+
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+// Route::resource('/contact', 'ContactController');
+
+Route::get('/contact', 'ContactController@create')->name('contact.create');
+Route::post('/contact', 'ContactController@store')->name('contact.store');

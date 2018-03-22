@@ -1,0 +1,35 @@
+body{
+    background-color: #3c8dbc;
+}
+p{
+    padding: 5px;
+}
+header{
+    border-bottom: 2px solid black;
+    background-color: white;
+}
+.introtext{
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 70%;
+    margin-top: 5%;
+    margin-left: 15%;
+    font-size: 2em;
+    background-color: white;
+}
+.btn-group{
+    float: right;
+    text-align: right;
+    width: 30%;
+    margin-top: 1.5%;
+    padding: 2px;
+}
+.btn{
+    display: inline-block;
+    background-color: #3c8dbc;
+    width: 15%;
+    padding: 1px;
+}
+.logo{
+    padding-left: 25;
+}
