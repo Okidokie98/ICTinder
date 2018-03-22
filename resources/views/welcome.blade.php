@@ -8,7 +8,7 @@
 <header>
     <img src="{{ asset('img/logo.png') }}" alt="ICTinder logo" width = "15%" class = "logo">
     <div class="btn-group" role="group">
-        <a href="/contact"><button class ="btn btn-block btn-primary btn-lg">contact</button></a>
+        <a href="/contact"><button class ="btn btn-block btn-primary btn-lg">Contact</button></a>
         <a href="/home"><button class ="btn btn-block btn-primary btn-lg">Log in</button></a>
     </div>
 </header>
