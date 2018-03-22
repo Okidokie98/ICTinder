@@ -1,3 +1,9 @@
+@extends('adminlte::page')
+
+@section('title', 'AdminLTE')
+
+@section('content')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,3 +41,4 @@
 
 
 
+@stop
