@@ -111,7 +111,7 @@ return [
         'MAIN NAVIGATION',
         [
             'text'        => 'Contact',
-            'url'         => 'contact',
+            'url'         => 'contactUS',
             'icon'        => 'file',
             'label'       => 4,
             'label_color' => 'success',
