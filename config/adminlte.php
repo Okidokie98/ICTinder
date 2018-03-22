@@ -118,9 +118,9 @@ return [
         ],
         'ACCOUNT SETTINGS',
         [
-            'text' => 'Profile',
-            'url'  => 'admin/settings',
-            'icon' => 'user',
+            'text' => 'Chat',
+            'url'  => 'createbutton',
+            
         ],
         [
             'text' => 'Change Password',
