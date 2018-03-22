@@ -17,7 +17,18 @@ Route::get('/', function () {
 
 
 Route::get('/overview', function () {
-    return view('overview');
+
+    $chats = [
+        'Brandon',
+        'Rik',
+        'Dennis',
+        'Lesley'
+    ];
+
+
+
+
+    return view('overview', compact('chats'));
 });
 
 Route::get('/createbutton', function () {
