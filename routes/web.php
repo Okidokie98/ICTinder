@@ -19,14 +19,10 @@ Route::get('/', function () {
 
 Route::get('/overview', function () {
 
-    $chats = [
-        'Brandon',
-        'Rik',
-        'Dennis',
-        'Lesley'
-    ];
+    $chats = DB::table('chats')->get();
 
-    return view('overview', compact('chats'));
+
+   return view('overview', compact('chats'));
 });
 
 Route::get('/createbutton', function () {
