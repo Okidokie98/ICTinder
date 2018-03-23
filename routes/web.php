@@ -26,9 +26,6 @@ Route::get('/overview', function () {
         'Lesley'
     ];
 
-
-
-
     return view('overview', compact('chats'));
 });
 
@@ -38,6 +35,7 @@ Route::get('/createbutton', function () {
 
 Route::get('/chat', function () {
     return view('chat');
+});
 
 Route::get('/contactUS', function () {
     return view('create');
