@@ -116,6 +116,13 @@ return [
             'label'       => 4,
             'label_color' => 'success',
         ],
+        [
+            'text'        => 'create chat',
+            'url'         => 'createbutton',
+            'icon'        => 'file',
+            'label'       => 4,
+            'label_color' => 'success',
+        ],
         'ACCOUNT SETTINGS',
         [
             'text' => 'Profile',
