@@ -39,9 +39,13 @@ Route::get('/createbutton', function () {
 Route::get('/chat', function () {
     return view('chat');
 });
+
 Route::get('/contactUS', function () {
     return view('create');
+});
 
+Route::get('/findmatch', function () {
+    return view('findmatch');
 });
 
 Auth::routes();
