@@ -44,9 +44,10 @@ Route::get('/contactUS', function () {
 
 });
 
-Route::get('/editprofile', function () {
-    return view('editprofile');
-});
+// Route::get('/editprofile', function () {
+//     return view('editprofile');
+// });
+Route::get('/editprofile', 'EditProfileController@index');
 
 Auth::routes();
 
