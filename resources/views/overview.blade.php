@@ -8,10 +8,9 @@
 
         @foreach($chats  as $chat)
 
-            <li><a href="chat">{{$chat->body}}</a></li>
+            <li><a href="overview/{chat}">{{$chat->body}}</a></li>
         @endforeach
 
     </ul>
-
 
 @stop

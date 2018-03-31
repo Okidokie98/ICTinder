@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 Route::get('/overview', function () {
 
-    $chats = DB::table('chats')->get();
+    $chats = App\Chat::all();
 
 
    return view('overview', compact('chats'));
@@ -29,8 +29,11 @@ Route::get('/createbutton', function () {
     return view('createbutton');
 });
 
-Route::get('/chat', function () {
-    return view('chat');
+Route::get('/overview/{chat}', function ($id) {
+    $chats = App\Chat::find($id);
+
+
+    return view('overview', compact('chats'));
 });
 
 Route::get('/contactUS', function () {
