@@ -16,25 +16,10 @@ Route::get('/', function () {
 });
 
 
-
-Route::get('/overview', function () {
-
-    $chats = App\Chat::all();
-
-
-   return view('overview', compact('chats'));
-});
-
 Route::get('/createbutton', function () {
     return view('createbutton');
 });
 
-Route::get('/overview/{chat}', function ($id) {
-    $chats = App\Chat::find($id);
-
-
-    return view('overview', compact('chats'));
-});
 
 Route::get('/contactUS', function () {
     return view('create');
@@ -42,6 +27,11 @@ Route::get('/contactUS', function () {
 });
 
 Auth::routes();
+
+Route::get('/overview', 'ChatController@index');
+Route::get('/overview/{chat}', 'ChatController@show');
+
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 // Route::resource('/contact', 'ContactController');
