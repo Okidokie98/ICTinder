@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\User;
 
 class EditProfileController extends Controller
 {
@@ -13,7 +14,7 @@ class EditProfileController extends Controller
      */
     public function index()
     {
-        return view('editprofile');
+        return view('profile.index');
     }
 
     /**
@@ -23,7 +24,7 @@ class EditProfileController extends Controller
      */
     public function create()
     {
-        //
+        return view('profile.create');
     }
 
     /**
@@ -32,9 +33,17 @@ class EditProfileController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        //
+        //dd(request()->all());
+
+        $profile = new \App\User;
+
+        $profile->name = request('name');
+
+        $profile->save();
+
+        return redirect('/');
     }
 
     /**
@@ -56,7 +65,7 @@ class EditProfileController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('profile.edit');
     }
 
     /**

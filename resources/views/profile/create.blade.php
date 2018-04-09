@@ -7,7 +7,9 @@
 @stop
 
 @section('content')
-    <form method="post" action="">  
+    <form method="post" action="/posts">
+        {{ csrf_field() }}
+
         Username: <input type="text" name="name">
         <br><br>
         E-mail: <input type="text" name="email">

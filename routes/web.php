@@ -44,14 +44,16 @@ Route::get('/contactUS', function () {
 
 });
 
-// Route::get('/editprofile', function () {
-//     return view('editprofile');
-// });
-Route::get('/editprofile', 'EditProfileController@index');
+Route::get('/profile', 'ProfileController@index');
+Route::get('/profile/create', 'ProfileController@create');
+Route::post('/posts', 'ProfileController@store');
+Route::get('/profile/edit', 'ProfileController@edit');
+//Route::get('/..../id/edit');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
 // Route::resource('/contact', 'ContactController');
 
 Route::get('/contact', 'ContactController@create')->name('contact.create');
