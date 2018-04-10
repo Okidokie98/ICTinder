@@ -26,7 +26,7 @@
       die("Connection failed: " . $conn->connect_error);
   } 
 
-  $sql = "SELECT name FROM users";
+  $sql = "SELECT name FROM users WHERE id = 1";
   $result = $conn->query($sql);
 
   if ($result->num_rows > 0) {
@@ -75,8 +75,7 @@ $conn->close();
     </li>
   </ul>
 
-  <a href="#" class="btn btn-primary btn-block"><b>Follow</b></a>
 </div>
-<!-- /.box-body -->
+
 </div>
 @stop
