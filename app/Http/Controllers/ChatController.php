@@ -31,7 +31,7 @@ class ChatController extends Controller
         $chats = Chat::all();
 
 
-        return view('overview.index', compact('chats'));
+        return view('chats.index', compact('chats'));
     }
 
     public function show($chat_id)
@@ -41,6 +41,6 @@ class ChatController extends Controller
         $chat = Chat::find($chat_id);
 
 
-        return view('overview.show', compact('chat'));
+        return view('chats.show', compact('chat'));
     }
 }

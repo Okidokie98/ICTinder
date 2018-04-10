@@ -37,8 +37,8 @@ Route::get('/contactUS', function () {
 
 Auth::routes();
 
-Route::get('/overview', 'ChatController@index');
-//Route::get('/overview/{chat}', 'ChatController@show');
+Route::get('/chats', 'ChatController@index');
+Route::get('/chats/{chat}', 'ChatController@show');
 
 
 

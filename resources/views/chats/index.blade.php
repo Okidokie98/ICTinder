@@ -9,7 +9,6 @@
         @foreach($chats  as $chat)
 
             <li> {{$chat->body}} </li>
-
         @endforeach
 
     </ul>
