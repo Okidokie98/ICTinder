@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use Illuminate\Http\Request;
+use App\Chat;
 class ChatController extends Controller
 {
     /**
@@ -21,6 +22,9 @@ class ChatController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
+
     public function index()
     {
 
@@ -30,11 +34,11 @@ class ChatController extends Controller
         return view('overview.index', compact('chats'));
     }
 
-    public function show($id)
+    public function show($chat_id)
     {
 
 
-        $chat = Chat::find($id);
+        $chat = Chat::find($chat_id);
 
 
         return view('overview.show', compact('chat'));
