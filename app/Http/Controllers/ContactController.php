@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use App\Mail\Contact;
 
 class ContactController extends Controller
@@ -38,20 +39,17 @@ class ContactController extends Controller
     {
         $contact = [];
 
-    $contact['name'] = $request->get('name');
-    $contact['email'] = $request->get('email');
-    $contact['msg'] = $request->get('msg');
+        $contact['name'] = $request->get('name');
+        $contact['email'] = $request->get('email');
+        $contact['msg'] = $request->get('msg');
 
-    // Mail delivery logic goes here
+        // Mail delivery logic goes here
+        Mail::to(config('mail.support.address'))->send(new Contact($contact));
 
-    flash('Your message has been sent!')->success();
+        flash('Your message has been sent!')->success();
+  
 
-    
-
-    return redirect('/');
-
-    Mail::to(config('mail.support.address'))->send(new Contact($contact));
-
+        return redirect('/');
     }
 
     /**
