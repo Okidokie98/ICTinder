@@ -15,8 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-
 Route::get('/overview', function () {
 
     $chats = [
@@ -25,9 +23,6 @@ Route::get('/overview', function () {
         'Dennis',
         'Lesley'
     ];
-
-
-
 
     return view('overview', compact('chats'));
 });
@@ -39,6 +34,12 @@ Route::get('/createbutton', function () {
 Route::get('/chat', function () {
     return view('chat');
 });
+
+// Route::get('/forum', function () {
+//     return view('forum/index');
+// });
+Route::get('/forum', 'ForumController@index')->name('forum');
+
 Route::get('/contactUS', function () {
     return view('create');
 
@@ -51,3 +52,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/contact', 'ContactController@create')->name('contact.create');
 Route::post('/contact', 'ContactController@store')->name('contact.store');
+

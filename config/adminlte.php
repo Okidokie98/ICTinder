@@ -110,17 +110,22 @@ return [
     'menu' => [
         'MAIN NAVIGATION',
         [
+            'text' => 'Chat',
+            'url'  => 'createbutton',
+            'icon' => 'weixin',
+            
+        ],
+        [
+            'text' => 'Forum',
+            'url'  => 'forum',
+            'icon' => 'commenting',
+        ],
+        [
             'text'        => 'Contact',
             'url'         => 'contactUS',
             'icon'        => 'file',
             'label'       => 4,
             'label_color' => 'success',
-        ],
-        'ACCOUNT SETTINGS',
-        [
-            'text' => 'Chat',
-            'url'  => 'createbutton',
-            
         ],
         [
             'text' => 'Change Password',
