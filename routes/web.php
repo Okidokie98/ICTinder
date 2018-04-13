@@ -39,10 +39,10 @@ Route::get('/chat', function () {
 //     return view('forum/index');
 // });
 Route::get('/forum', 'ForumController@index')->name('forum');
+Route::resource('/thread', 'ThreadController');
 
 Route::get('/contactUS', function () {
     return view('create');
-
 });
 
 Auth::routes();
