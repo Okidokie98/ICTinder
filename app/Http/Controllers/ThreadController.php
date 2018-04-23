@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Thread;
 use Illuminate\Http\Request;
+use App\Thread;
 
 class ThreadController extends Controller
 {
@@ -14,8 +14,10 @@ class ThreadController extends Controller
      */
     public function index()
     {
-        $threads= Thread::paginate(15);
-        return view('thread.index', compact('threads'));
+        // $threads = Thread::all();
+        // $threads = Thread::orderby('subject', 'desc')->get();
+        $threads = Thread::orderby('subject', 'desc')->paginate(5);
+        return view('threads.index')->with('threads', $threads);
     }
 
     /**
@@ -47,7 +49,8 @@ class ThreadController extends Controller
      */
     public function show(Thread $thread)
     {
-        //
+        $thread =  Thread::find($id);
+        return view('threads.show')->with('thread', $thread);
     }
 
     /**

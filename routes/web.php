@@ -35,11 +35,8 @@ Route::get('/chat', function () {
     return view('chat');
 });
 
-// Route::get('/forum', function () {
-//     return view('forum/index');
-// });
 Route::get('/forum', 'ForumController@index')->name('forum');
-Route::resource('/thread', 'ThreadController');
+Route::resource('/threads', 'ThreadController');
 
 Route::get('/contactUS', function () {
     return view('create');
