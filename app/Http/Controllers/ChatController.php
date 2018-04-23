@@ -30,16 +30,13 @@ class ChatController extends Controller
 
         $chats = Chat::all();
 
-
         return view('chats.index', compact('chats'));
     }
 
-    public function show($chat_id)
+    public function show($id)
     {
 
-
-        $chat = Chat::find($chat_id);
-
+        $chat = Chat::find($id);
 
         return view('chats.show', compact('chat'));
     }

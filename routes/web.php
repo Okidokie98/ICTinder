@@ -15,15 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/overview/{chat}', function ($chat_id) {
-    $chat = DB::table('chats')->find($chat_id);
-
-    dd($chat);
-
-    return view('overview', compact('tasks'));
-});
-
-
 
 Route::get('/createbutton', function () {
     return view('createbutton');

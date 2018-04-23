@@ -4,14 +4,14 @@
 
 @section('content')
 
-    <ul>
+    {{--<ul>--}}
 
-        @foreach($chats  as $chat)
+        {{--@foreach($chats  as $chat)--}}
 
-            <li> {{$chat->body}} </li>
+            {{--<li> {{$chat->body}} </li>--}}
 
-        @endforeach
+        {{--@endforeach--}}
 
-    </ul>
+    {{--</ul>--}}
 
 @stop

@@ -4,6 +4,6 @@
 
 @section('content')
 
-<button><a href="overview">Create a new chat</a></button>
+{{--<button><a href="overview">Create a new chat</a></button>--}}
 
 @stop

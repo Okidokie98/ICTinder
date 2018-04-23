@@ -6,8 +6,7 @@
 
     <ul>
 
-        @foreach($chats  as $chat)
-
+        @foreach($chats as $chat)
             <li> {{$chat->body}} </li>
         @endforeach
 
