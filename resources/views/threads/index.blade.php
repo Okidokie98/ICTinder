@@ -8,9 +8,9 @@
 
 @section('content')
     @if(count($threads) > 0)
-        @foreach($threads as thread)
-            <div class="well">
-                <h3><a href="/threads/{{$thread->id}}">{{$thread->title}}</a></h3>
+        @foreach($threads as $thread)
+            <div class="box">
+                <h3><a href="/threads/{{$thread->id}}">{{$thread->subject}}</a></h3>
                 <small>Written on {{$thread->created_at}}</small>
             </div>
         @endforeach

@@ -16,7 +16,7 @@ class ThreadController extends Controller
     {
         // $threads = Thread::all();
         // $threads = Thread::orderby('subject', 'desc')->get();
-        $threads = Thread::orderby('subject', 'desc')->paginate(5);
+        $threads = Thread::orderby('id', 'desc')->paginate(5);
         return view('threads.index')->with('threads', $threads);
     }
 
@@ -47,7 +47,7 @@ class ThreadController extends Controller
      * @param  \App\Thread  $thread
      * @return \Illuminate\Http\Response
      */
-    public function show(Thread $thread)
+    public function show($id)
     {
         $thread =  Thread::find($id);
         return view('threads.show')->with('thread', $thread);

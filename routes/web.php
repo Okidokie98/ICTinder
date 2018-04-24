@@ -35,7 +35,6 @@ Route::get('/chat', function () {
     return view('chat');
 });
 
-Route::get('/forum', 'ForumController@index')->name('forum');
 Route::resource('/threads', 'ThreadController');
 
 Route::get('/contactUS', function () {
