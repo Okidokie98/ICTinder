@@ -1,12 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'ICTinder threads')
-
-@section('content_header')
-    <h1>{{$thread->subject}}</h1>
-@stop
+@section('title', 'ICTinder thread')
 
 @section('content')
+    <h1>{{$thread->subject}}</h1>
     <div>
         <p>{{$thread->body}}</p>
     </div>

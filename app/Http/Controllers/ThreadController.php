@@ -27,9 +27,9 @@ class ThreadController extends Controller
      */
     public function create()
     {
-        //
+        return view('threads.create');
     }
-
+    
     /**
      * Store a newly created resource in storage.
      *
@@ -38,7 +38,12 @@ class ThreadController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'subject' => 'required',
+            'body' => 'required',
+        ]);
+
+        return 123;
     }
 
     /**
