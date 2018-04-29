@@ -118,8 +118,18 @@ return [
             'text'        => 'Pages',
             'url'         => 'admin/pages',
             'icon'        => 'file',
-            'label'       => 4,
-            'label_color' => 'success',
+        ],
+        [
+            'text'        => 'Skilllevels',
+            'url'         => 'skilllevels',
+        ],
+        [
+            'text'        => 'Abous Us',
+            'url'         => 'aboutus',
+        ],
+        [
+            'text'        => 'FAQ',
+            'url'         => 'faq',
         ],
         'ACCOUNT SETTINGS',
         [

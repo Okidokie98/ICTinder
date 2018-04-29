@@ -18,3 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/aboutus', 'AboutUsController@index');
+Route::get('/faq', 'FAQController@index');
+
+Route::resource('skilllevels', 'SkillLevelsController');
