@@ -71,9 +71,10 @@ class ThreadController extends Controller
      * @param  \App\Thread  $thread
      * @return \Illuminate\Http\Response
      */
-    public function edit(Thread $thread)
+    public function edit($id)
     {
-        //
+        $thread =  Thread::find($id);
+        return view('threads.edit')->with('thread', $thread);
     }
 
     /**
@@ -83,9 +84,22 @@ class ThreadController extends Controller
      * @param  \App\Thread  $thread
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Thread $thread)
+    public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'subject' => 'required',
+            'body' => 'required',
+        ]);
+
+        // Create Thread
+        $thread = Thread::find($id);
+        $thread->subject = $request->input('subject');
+        $thread->body = $request->input('body');
+        $thread->type = $request->input('type');
+        $thread->save();
+
+        return redirect('/threads')->with('succes', 'Thread Updated');
+
     }
 
     /**
@@ -94,8 +108,10 @@ class ThreadController extends Controller
      * @param  \App\Thread  $thread
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Thread $thread)
+    public function destroy($id)
     {
-        //
+        $thread = Thread::find($id);
+        $thread->delete();
+        return redirect('/threads')->with('succes', 'Thread Removed');
     }
 }

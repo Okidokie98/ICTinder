@@ -7,7 +7,8 @@
 @stop
 
 @section('content')
-    <a href="/threads/create">Create Post</a>
+    <div class="btn btn-default pull-right"><a href="/threads/create">Create Thread</a></div>
+    <br><br>
     @if(count($threads) > 0)
         @foreach($threads as $thread)
             <div class="box">
