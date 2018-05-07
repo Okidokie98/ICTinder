@@ -16,7 +16,7 @@ class ThreadController extends Controller
     {
         // $threads = Thread::all();
         // $threads = Thread::orderby('subject', 'desc')->get();
-        $threads = Thread::orderby('id', 'desc')->paginate(5);
+        $threads = Thread::orderby('created_at', 'desc')->paginate(5);
         return view('threads.index')->with('threads', $threads);
     }
 
@@ -43,7 +43,14 @@ class ThreadController extends Controller
             'body' => 'required',
         ]);
 
-        return 123;
+        // Create Thread
+        $thread = new Thread;
+        $thread->subject = $request->input('subject');
+        $thread->body = $request->input('body');
+        $thread->type = $request->input('type');
+        $thread->save();
+
+        return redirect('/threads')->with('succes', 'Thread Created');
     }
 
     /**

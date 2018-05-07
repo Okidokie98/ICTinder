@@ -7,6 +7,7 @@
 @stop
 
 @section('content')
+    <a href="/threads/create">Create Post</a>
     @if(count($threads) > 0)
         @foreach($threads as $thread)
             <div class="box">
