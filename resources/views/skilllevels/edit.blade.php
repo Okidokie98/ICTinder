@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+<title>Edit a skill!</title>
+
 @section('content')
     <h1>Edit your IT skills!</h1>
     {!! Form::open(['action' => ['SkillLevelsController@update', $skilllevel->id], 'method' => 'POST']) !!}

@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+<title>{{$skilllevel->skillName}}</title>
+
 @section('content')
     <a href="/skilllevels" class="btn btn-default">Go Back</a>
     <div class="card">

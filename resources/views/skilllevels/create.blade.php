@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+<title>Add a new skill!</title>
+
 @section('content')
     <h1>Create your IT skills!</h1>
     {!! Form::open(['action' => 'SkillLevelsController@store', 'method' => 'POST']) !!}
