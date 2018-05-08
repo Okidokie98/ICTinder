@@ -4,7 +4,7 @@
 
 @section('content')
     <h1>Edit Thread</h1>
-    {!! Form::open(['action' => ['ThreadController@update, $thread->id'], 'method' => 'POST']) !!}
+    {!! Form::open(['action' => ['ThreadController@update', $thread->id], 'method' => 'POST']) !!}
         <div class='form-group'>
             {{Form::label('subject', 'Subject*')}}
             {{Form::text('subject', $thread->subject, ['class' => 'form-control', 'placeholder' => 'Subject'])}}
