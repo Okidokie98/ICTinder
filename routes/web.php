@@ -16,8 +16,8 @@ Route::get('/', function () {
 });
 
 
-Route::get('/createbutton', function () {
-    return view('createbutton');
+Route::get('/createchat', function () {
+    return view('createchat');
 });
 
 
@@ -29,7 +29,7 @@ Route::get('/contactUS', function () {
 Auth::routes();
 
 Route::get('/chats', 'ChatController@index');
-//Route::get('/createbutton', 'ChatController@store');
+//Route::get('/createchat', 'ChatController@store');
 Route::get('/chats/{chat}', 'ChatController@show');
 
 
