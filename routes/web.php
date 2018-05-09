@@ -29,7 +29,7 @@ Route::get('/contactUS', function () {
 Auth::routes();
 
 Route::get('/chats', 'ChatController@index');
-Route::get('/createchat', 'ChatController@store');
+//Route::get('/createbutton', 'ChatController@store');
 Route::get('/chats/{chat}', 'ChatController@show');
 
 

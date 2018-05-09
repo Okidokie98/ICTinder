@@ -120,7 +120,7 @@ return [
         [
 
             'text'        => 'create chat',
-            'url'         => 'createchat',
+            'url'         => 'createbutton',
             'icon'        => 'file',
             'label'       => 4,
             'label_color' => 'success',
