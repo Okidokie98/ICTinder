@@ -16,20 +16,14 @@ Route::get('/', function () {
 });
 
 
-Route::get('/createchat', function () {
-    return view('createchat');
-});
-
-
 Route::get('/contactUS', function () {
     return view('create');
-
 });
 
 Auth::routes();
 
 Route::get('/chats', 'ChatController@index');
-//Route::get('/createchat', 'ChatController@store');
+Route::get('/createchat', 'ChatController@store');
 Route::get('/chats/{chat}', 'ChatController@show');
 
 

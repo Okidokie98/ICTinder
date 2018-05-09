@@ -4,6 +4,7 @@
 
 @section('content')
 
+    {{--input chat name--}}
     <div class="form-group has-feedback {{ $errors->has('body') ? 'has-error' : '' }}">
         <input name="body" class="form-control"
                placeholder="{{ trans('name') }}">
@@ -13,6 +14,8 @@
                         </span>
         @endif
     </div>
+
+    {{--button to submit chat--}}
     <div class="col-xs-4">
         <a href="chats"> <button type="submit"
                                  class="btn btn-primary btn-block btn-flat">{{ trans('Create a new chat') }}</button></a>

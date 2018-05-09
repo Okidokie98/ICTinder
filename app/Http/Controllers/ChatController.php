@@ -24,7 +24,7 @@ class ChatController extends Controller
      */
 
 
-
+    //shows all chats
     public function index()
     {
 
@@ -33,6 +33,7 @@ class ChatController extends Controller
         return view('chats.index', compact('chats'));
     }
 
+    //shows a specific chat
     public function show($id)
     {
 
@@ -41,11 +42,14 @@ class ChatController extends Controller
         return view('chats.show', compact('chat'));
     }
 
-//    public function store()
-//    {
-//
-//
-//
-////        return view('chats.index', compact('chats'));
-//    }
+    public function store(Request $request)
+    {
+//        $this->validate($request, [
+//            'name' => 'required',
+//        ]);
+
+        return view('createchat', compact('chats'));
+    }
+
+
 }

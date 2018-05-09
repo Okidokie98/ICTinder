@@ -4,6 +4,7 @@
 
 @section('content')
 
+   {{--Shows specific chats--}}
    <h1>{{ $chat->body }}</h1>
 
 @stop

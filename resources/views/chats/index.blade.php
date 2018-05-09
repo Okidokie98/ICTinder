@@ -6,6 +6,7 @@
 
     <ul>
 
+        {{--displays all chats in database--}}
         @foreach($chats as $chat)
             <li> {{$chat->body}} </li>
         @endforeach
