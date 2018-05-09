@@ -110,6 +110,7 @@ return [
     'menu' => [
         'MAIN NAVIGATION',
         [
+
             'text'        => 'Contact',
             'url'         => 'contactUS',
             'icon'        => 'file',
@@ -117,8 +118,9 @@ return [
             'label_color' => 'success',
         ],
         [
+
             'text'        => 'create chat',
-            'url'         => 'createbutton',
+            'url'         => 'createchat',
             'icon'        => 'file',
             'label'       => 4,
             'label_color' => 'success',

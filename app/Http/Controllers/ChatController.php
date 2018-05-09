@@ -40,4 +40,12 @@ class ChatController extends Controller
 
         return view('chats.show', compact('chat'));
     }
+
+    public function store()
+    {
+
+
+
+//        return view('chats.index', compact('chats'));
+    }
 }
