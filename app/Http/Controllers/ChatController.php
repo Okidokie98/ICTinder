@@ -44,9 +44,10 @@ class ChatController extends Controller
 
     public function store(Request $request)
     {
-//        $this->validate($request, [
-//            'name' => 'required',
-//        ]);
+
+
+        $chats['body'] = $request->get('body');
+
 
         return view('createchat', compact('chats'));
     }
