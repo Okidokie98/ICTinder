@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('adminlte::page')
 
 <title>Skilllevels</title>
 
@@ -10,7 +10,6 @@
             <div class="card">
                 <div class="card-body">
                     <h3><a href="/skilllevels/{{$skilllevel->id}}">{{$skilllevel->skillName}}</a></h3>
-                    <small>Written on {{$skilllevel->created_at}}</small>
                 </div>
             </div>
         @endforeach

@@ -126,6 +126,10 @@ return [
             'text'        => 'FAQ',
             'url'         => 'faq',
         ],
+        [
+            'text'        => 'Add a new skill!',
+            'url'         => 'skilllevels/create',
+        ],
         'ACCOUNT SETTINGS',
         [
             'text' => 'Chat',

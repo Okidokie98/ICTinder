@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\SkillLevel;
 use DB;
+use Illuminate\Support\Facades\Auth;
 
 class SkillLevelsController extends Controller
 {
@@ -24,9 +25,12 @@ class SkillLevelsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($skilllevel_id = null)
     {
-        return view('skilllevels.create');
+
+        $skilllevels = \DB::table('skill_levels')->pluck('skillName', 'id');
+        $skilllevels = ['0' => 'Select a skilllevel'] + collect($skilllevels)->toArray();
+        return view('skilllevels.create')->with('skilllevels', $skilllevels);
     }
 
     /**
@@ -48,7 +52,7 @@ class SkillLevelsController extends Controller
         $skilllevel->skillDescription = $request->input('skillDescription'); 
         $skilllevel->save();
 
-        return redirect('/skilllevels')->with('succes', 'Skill added');
+        return redirect('/skilllevels');
     }
 
     /**
@@ -109,6 +113,6 @@ class SkillLevelsController extends Controller
         $skilllevel = SkillLevel::find($id);
         $skilllevel->delete();
 
-        return redirect('/skilllevels')->with('succes', 'Skill deleted!');
+        return redirect('/skilllevels');
     }
 }

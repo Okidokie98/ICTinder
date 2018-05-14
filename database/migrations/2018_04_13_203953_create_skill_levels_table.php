@@ -17,6 +17,7 @@ class CreateSkillLevelsTable extends Migration
             $table->increments('id');
             $table->string('skillName');
             $table->mediumText('skillDescription');
+            $table->integer('skillRating')->default(0);
             $table->timestamps();
         });
     }

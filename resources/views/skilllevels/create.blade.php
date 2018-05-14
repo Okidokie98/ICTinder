@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('adminlte::page')
 
 <title>Add a new skill!</title>
 
@@ -6,11 +6,11 @@
     <h1>Create your IT skills!</h1>
     {!! Form::open(['action' => 'SkillLevelsController@store', 'method' => 'POST']) !!}
         <div class="form-group">
-            {{Form::label('skillName', 'Add a name to the skill')}}
-            {{Form::text('skillName', '', ['class' => 'form-control', 'placeholder' => 'Add a name to the skill'])}}
+            {{Form::label('skillName', 'Add a skill')}}
+            {!! Form::select('id', $skilllevels, null) !!}
         </div>
         <div class="form-group">
-            {{Form::label('skillDescription', 'Add a short description to the skill')}}
+            {{Form::label('skillDescription', 'Add a rating to the skill')}}
             {{Form::textarea('skillDescription', '', ['id' => 'article-ckeditor','class' => 'form-control', 'placeholder' => 'Add a short description to the skill'])}}
         </div>
         {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
