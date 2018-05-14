@@ -22,8 +22,10 @@ Route::get('/contactUS', function () {
 
 Auth::routes();
 
+//ChatControllers
 Route::get('/chats', 'ChatController@index');
-Route::get('/createchat', 'ChatController@store');
+Route::Post('/createchat', 'ChatController@store');
+Route::get('/createchat', 'ChatController@create');
 Route::get('/chats/{chat}', 'ChatController@show');
 
 

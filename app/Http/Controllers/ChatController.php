@@ -42,15 +42,28 @@ class ChatController extends Controller
         return view('chats.show', compact('chat'));
     }
 
+    //stores a chat
     public function store(Request $request)
     {
+            return $request->all();
+//        $chat = new Chat;
+//        $chat->id;
+//        $chat->body = $request->body;
+//
+//        $chat->save();
 
 
-        $chats['body'] = $request->get('body');
+
+        //$chats['body'] = $request->get('body');
 
 
-        return view('createchat', compact('chats'));
+        //return view('chats.createchat', compact('chat'));
     }
 
+    //creates a chat
+    public function create()
+    {
+        return view('chats.createchat');
+    }
 
 }
