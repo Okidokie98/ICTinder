@@ -110,6 +110,7 @@ return [
     'menu' => [
         'MAIN NAVIGATION',
         [
+
             'text' => 'Chat',
             'url'  => 'createbutton',
             'icon' => 'weixin',
@@ -121,10 +122,22 @@ return [
             'icon' => 'commenting',
         ],
         [
+
             'text'        => 'Contact',
             'url'         => 'contactUS',
             'icon'        => 'file',
         ],
+
+        [
+
+            'text'        => 'create chat',
+            'url'         => 'createchat',
+            'icon'        => 'file',
+            'label'       => 4,
+            'label_color' => 'success',
+        ],
+        'ACCOUNT SETTINGS',
+
         [
             'text'        => 'Skilllevels',
             'url'         => 'skilllevels',

@@ -15,25 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/overview', function () {
-
-    $chats = [
-        'Brandon',
-        'Rik',
-        'Dennis',
-        'Lesley'
-    ];
-
-    return view('overview', compact('chats'));
-});
-
-Route::get('/createbutton', function () {
-    return view('createbutton');
-});
-
-Route::get('/chat', function () {
-    return view('chat');
-});
 
 Route::resource('/threads', 'ThreadController');
 
@@ -42,6 +23,13 @@ Route::get('/contactUS', function () {
 });
 
 Auth::routes();
+
+
+//ChatControllers
+Route::get('/chats', 'ChatController@index');
+Route::Post('/createchat', 'ChatController@store');
+Route::get('/createchat', 'ChatController@create');
+Route::get('/chats/{chat}', 'ChatController@show');
 
 
 Route::get('/home', 'HomeController@index')->name('home');
