@@ -7,5 +7,22 @@
 @stop
 
 @section('content')
-    <p>You are logged in!, This is where your profile is supposed to be</p>
+<div class="box box-primary">
+<div class="box-body box-profile">
+  <img class="profile-user-img img-responsive img-circle" src="{{ asset('img/profile-placeholder.jpg') }}" alt="User profile picture">
+
+  <h3 class="profile-username text-center">
+  </h3>
+
+  <p class="text-muted text-center">Software Engineer</p>
+
+  <ul class="list-group list-group-unbordered">
+    <li class="list-group-item">
+      <b>Email: </b> <a class="pull-right"> </a>
+    </li>
+  </ul>
+
+</div>
+
+</div>
 @stop

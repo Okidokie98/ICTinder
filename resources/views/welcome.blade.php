@@ -9,7 +9,7 @@
     <img src="{{ asset('img/logo.png') }}" alt="ICTinder logo" width = "15%" class = "logo">
     <div class="btn-group" role="group">
         <a href="/contactUS"><button class ="btn btn-block btn-primary btn-lg">Contact</button></a>
-        <a href="/home"><button class ="btn btn-block btn-primary btn-lg">Log in</button></a>
+        <a href="/login"><button class ="btn btn-block btn-primary btn-lg">Log in</button></a>
     </div>
 </header>
 
@@ -19,7 +19,7 @@
         <h1>What are we?</h1>
         <p>
             This website is meant to help people get together, to learn programming skills from one another.
-            The idea behind this concept is that you register yourself on the site, which you can do by clicking the log in button at the top, or right <a href = "/home">here</a>.
+            The idea behind this concept is that you register yourself on the site, which you can do by clicking the log in button at the top, or right <a href = "/login">here</a>.
         </p>
         <p>
             When you have created you account you will need to set up a profile with some personal information, and you need to rate yourself in the skills we support. 
