@@ -111,12 +111,23 @@ return [
         'MAIN NAVIGATION',
         [
 
+            'text' => 'Chat',
+            'url'  => 'createbutton',
+            'icon' => 'weixin',
+            
+        ],
+        [
+            'text' => 'Forum',
+            'url'  => 'threads',
+            'icon' => 'commenting',
+        ],
+        [
+
             'text'        => 'Contact',
             'url'         => 'contactUS',
             'icon'        => 'file',
-            'label'       => 4,
-            'label_color' => 'success',
         ],
+
         [
 
             'text'        => 'create chat',
@@ -126,10 +137,22 @@ return [
             'label_color' => 'success',
         ],
         'ACCOUNT SETTINGS',
+
         [
-            'text' => 'Profile',
-            'url'  => 'admin/settings',
-            'icon' => 'user',
+            'text'        => 'Skilllevels',
+            'url'         => 'skilllevels',
+        ],
+        [
+            'text'        => 'Abous Us',
+            'url'         => 'aboutus',
+        ],
+        [
+            'text'        => 'FAQ',
+            'url'         => 'faq',
+        ],
+        [
+            'text'        => 'Add a new skill!',
+            'url'         => 'skilllevels/create',
         ],
         [
             'text' => 'Change Password',
