@@ -26,7 +26,7 @@
                         <div class="box box-solid limit-p-width">
                             <div class="box-body affiliate">
                                 <div class="heading">
-                                    PREMIUM SHIT
+                                    Widget placeholder
                                 </div>
                             </div>
                         </div>

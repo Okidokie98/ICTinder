@@ -41,9 +41,6 @@
                                     {{Form::hidden('_method', 'DELETE')}}
                                     {{Form::submit('Delete', ['class' => 'btn btn-sm btn-danger'])}}
                                 {!!Form::close()!!}
-                                
-                                <button type="button" class="btn btn-sm btn-danger">
-                                <i class="fa fa-trash-o"></i>&nbsp;  Delete</button>
                         </div>
                     </td>
                 </tr>
