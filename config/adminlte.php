@@ -110,6 +110,17 @@ return [
     'menu' => [
         'MAIN NAVIGATION',
         [
+            'text' => 'Chat',
+            'url'  => 'createbutton',
+            'icon' => 'weixin',
+            
+        ],
+        [
+            'text' => 'Forum',
+            'url'  => 'threads',
+            'icon' => 'commenting',
+        ],
+        [
             'text'        => 'Contact',
             'url'         => 'contactUS',
             'icon'        => 'file',
@@ -129,12 +140,6 @@ return [
         [
             'text'        => 'Add a new skill!',
             'url'         => 'skilllevels/create',
-        ],
-        'ACCOUNT SETTINGS',
-        [
-            'text' => 'Chat',
-            'url'  => 'createbutton',
-            
         ],
         [
             'text' => 'Change Password',

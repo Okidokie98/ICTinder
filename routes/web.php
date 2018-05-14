@@ -15,8 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-
 Route::get('/overview', function () {
 
     $chats = [
@@ -25,9 +23,6 @@ Route::get('/overview', function () {
         'Dennis',
         'Lesley'
     ];
-
-
-
 
     return view('overview', compact('chats'));
 });
@@ -39,9 +34,11 @@ Route::get('/createbutton', function () {
 Route::get('/chat', function () {
     return view('chat');
 });
+
+Route::resource('/threads', 'ThreadController');
+
 Route::get('/contactUS', function () {
     return view('create');
-
 });
 
 Auth::routes();
@@ -63,5 +60,8 @@ Route::get('/profile/{id}/delete', 'HomeController@delete');
 
 Route::delete('/deleted/{id}', array('uses' => 'HomeController@deleted', 'as' => 'delete.profile'));
 
+
+Route::get('/contact', 'ContactController@create')->name('contact.create');
+Route::post('/contact', 'ContactController@store')->name('contact.store');
 
 Route::resource('skilllevels', 'SkillLevelsController');
