@@ -23,12 +23,10 @@ class RegisterController extends Controller
 
     use RegistersUsers;
 
-    /**
-     * Where to redirect users after registration.
-     *
-     * @var string
-     */
-    protected $redirectTo = '/home';
+    // zorg ervoor dat de nieuw gebruiker meteen naar zijn eigen profiel gaat 
+    public function redirectPath() {
+        return '/profile/'. request()->user()->id;
+    }
 
     /**
      * Create a new controller instance.
