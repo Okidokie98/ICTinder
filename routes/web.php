@@ -46,6 +46,11 @@ Route::get('/contactUS', function () {
 
 Auth::routes();
 
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/aboutus', 'AboutUsController@index');
+Route::get('/faq', 'FAQController@index');
+
 //route voor het displayen van het profiel van de ingelogde gebruiker
 Route::get('/profile/{id}', 'HomeController@show');
 
@@ -58,5 +63,5 @@ Route::get('/profile/{id}/delete', 'HomeController@delete');
 
 Route::delete('/deleted/{id}', array('uses' => 'HomeController@deleted', 'as' => 'delete.profile'));
 
-Route::get('/contact', 'ContactController@create')->name('contact.create');
-Route::post('/contact', 'ContactController@store')->name('contact.store');
+
+Route::resource('skilllevels', 'SkillLevelsController');

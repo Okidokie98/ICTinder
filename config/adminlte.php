@@ -113,8 +113,22 @@ return [
             'text'        => 'Contact',
             'url'         => 'contactUS',
             'icon'        => 'file',
-            'label'       => 4,
-            'label_color' => 'success',
+        ],
+        [
+            'text'        => 'Skilllevels',
+            'url'         => 'skilllevels',
+        ],
+        [
+            'text'        => 'Abous Us',
+            'url'         => 'aboutus',
+        ],
+        [
+            'text'        => 'FAQ',
+            'url'         => 'faq',
+        ],
+        [
+            'text'        => 'Add a new skill!',
+            'url'         => 'skilllevels/create',
         ],
         'ACCOUNT SETTINGS',
         [
