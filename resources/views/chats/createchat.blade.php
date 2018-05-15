@@ -13,7 +13,7 @@
 
                 <div class="panel-body">
                     <form action="/createchat" method="POST">
-
+                        {{csrf_field() }}
 
 
                         <div class="form-group">
