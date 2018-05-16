@@ -12,19 +12,10 @@
             <h3 class="box-title">@lang('edit profile')</h3>
         </div>
         <form method="POST" action = '{{"/profile/". $id }}' accept-charset="UTF-8">
-            {{ method_field('PATCH') }}
-            {{ csrf_field() }}
-            <input type="hidden" name="previous_url" value="{{ url()->previous() }}">
-            <div class="box-body">
-                <div class="form-group {{ $errors->has('title') ? 'has-error' : '' }}">
-                    <label for="name:" class="control-label">@lang('name')</label>
-                    <input type="text" id="name" name="name" class="form-control" value="test"
-                           placeholder="Enter text">
-                    @if ($errors->has('title'))
-                        <span class="help-block">
-                        <strong>{{ $errors->first('title') }}</strong>
-                    </span>
-                    @endif
+            @method('put')
+            @csrf
+            <input type="text" name="name">
+ 
                 </div>
 
 

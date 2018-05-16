@@ -41,7 +41,7 @@ Route::get('/profile/{id}', 'HomeController@show');
 
 //route voor het aanpassen van de info in het profiel
 Route::get('/profile/{id}/edit', 'HomeController@edit');
-Route::post('/profiel/{id}/edit',  array('uses' => 'HomeController@update', 'as' => 'edit.profile'));
+Route::post('/profile/{id}/edit',  array('uses' => 'HomeController@update', 'as' => 'edit.profile'));
 
 //route om de accoutn te verwijderen uit de database
 Route::get('/profile/{id}/delete', 'HomeController@delete');
