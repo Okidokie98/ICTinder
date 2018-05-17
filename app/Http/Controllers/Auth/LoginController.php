@@ -20,12 +20,11 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
 
-    /**
-     * Where to redirect users after login.
-     *
-     * @var string
-     */
-    protected $redirectTo = '/home';
+    // display het profiel van de gebruiker die net is ingelogd
+    public function authenticated($request,$user)
+    {
+        return redirect('/profile/' . $user->id);
+    }
 
     /**
      * Create a new controller instance.
