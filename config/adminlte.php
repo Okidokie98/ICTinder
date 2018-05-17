@@ -85,7 +85,7 @@ return [
     |
     */
 
-    'dashboard_url' => 'home',
+    'dashboard_url' => '/',
 
     'logout_url' => 'logout',
 
@@ -109,38 +109,62 @@ return [
 
     'menu' => [
         'MAIN NAVIGATION',
+        // [
+
+        //     'text' => 'Chat',
+        //     'url'  => 'createbutton',
+        //     'icon' => 'weixin',
+            
+        // ],
         [
-            'text'        => 'Contact',
-            'url'         => 'contactUS',
-            'icon'        => 'file',
+            'text' => 'Forum',
+            'url'  => 'threads',
+            'icon' => 'commenting',
         ],
+
+        [
+
+            'text'        => 'create chat',
+            'url'         => 'createchat',
+            'icon'        => 'wechat',
+            'label'       => 4,
+            'label_color' => 'success',
+        ],
+
         [
             'text'        => 'Skilllevels',
             'url'         => 'skilllevels',
+            'icon'        => 'code',
         ],
+
+        [
+            'text'        => 'Add a new skill!',
+            'url'         => 'skilllevels/create',
+            'icon'        => 'code',
+        ],
+
         [
             'text'        => 'Abous Us',
             'url'         => 'aboutus',
         ],
+        
+        [
+            'text'        => 'Contact',
+            'url'         => 'contactUS',
+            'icon'        => 'comment',
+        ],
+
         [
             'text'        => 'FAQ',
             'url'         => 'faq',
+            'icon'        => 'question-circle'
         ],
-        [
-            'text'        => 'Add a new skill!',
-            'url'         => 'skilllevels/create',
-        ],
-        'ACCOUNT SETTINGS',
-        [
-            'text' => 'Chat',
-            'url'  => 'createbutton',
-            
-        ],
-        [
-            'text' => 'Change Password',
-            'url'  => 'admin/settings',
-            'icon' => 'lock',
-        ],
+
+        // [
+        //     'text' => 'Change Password',
+        //     'url'  => 'admin/settings',
+        //     'icon' => 'lock',
+        // ],
         // [
         //     'text'    => 'Multilevel',
         //     'icon'    => 'share',
