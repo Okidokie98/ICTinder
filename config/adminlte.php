@@ -85,7 +85,7 @@ return [
     |
     */
 
-    'dashboard_url' => 'profile/{id}',
+    'dashboard_url' => '/',
 
     'logout_url' => 'logout',
 

@@ -148,9 +148,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
-        Unisharp\Ckeditor\ServiceProvider::class,
-        Unisharp\Laravelfilemanager\LaravelFilemanagerServiceProvider::class,
-        Intervention\Image\ImageServiceProvider::class,
+
 
 
         /*
