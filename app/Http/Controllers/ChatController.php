@@ -53,10 +53,6 @@ class ChatController extends Controller
 
         return redirect('/chats');
 
-        //$chats['body'] = $request->get('body');
-
-
-        //return view('chats.createchat', compact('chat'));
     }
 
     //creates a chat
