@@ -25,21 +25,19 @@ Route::get('/contactUS', function () {
 Auth::routes();
 
 
-//ChatControllers
+//route voor chatfunctie
 Route::get('/chats', 'ChatController@index');
 Route::Post('/createchat', 'ChatController@store');
 Route::get('/createchat', 'ChatController@create');
 Route::get('/chats/{chat}', 'ChatController@show');
 
-
+//route voor
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/aboutus', 'AboutUsController@index');
 Route::get('/faq', 'FAQController@index');
 
 //route voor het displayen van het profiel van de ingelogde gebruiker
 Route::get('/profile/{id}', 'HomeController@show');
-
-
 
 
 //route voor het aanpassen van de info in het profiel
