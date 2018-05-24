@@ -32,7 +32,7 @@
     {!! Form::textarea('msg', null, ['class' => 'form-control']) !!}
 </div>
 
-{!! Form::submit('Submit', ['class' => 'btn btn-info']) !!}
+{!! Form::submit('Submit', ['class' => 'btn btn-primary']) !!}
 
 {!! Form::close() !!}
 </div>

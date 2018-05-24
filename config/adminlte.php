@@ -132,14 +132,8 @@ return [
         ],
 
         [
-            'text'        => 'Skilllevels',
-            'url'         => 'skilllevels',
-            'icon'        => 'code',
-        ],
-
-        [
-            'text'        => 'Add a new skill!',
-            'url'         => 'skilllevels/create',
+            'text'        => 'Skills',
+            'url'         => 'skills',
             'icon'        => 'code',
         ],
 

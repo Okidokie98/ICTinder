@@ -10,6 +10,7 @@
     <div class="btn-group" role="group">
         <a href="/contactUS"><button class ="btn btn-block btn-primary btn-lg">Contact</button></a>
         <a href="/login"><button class ="btn btn-block btn-primary btn-lg">Log in</button></a>
+        <a href="/faq"><button class ="btn btn-block btn-primary btn-lg">FAQ</button></a>
     </div>
 </header>
 

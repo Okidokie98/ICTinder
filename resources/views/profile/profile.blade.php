@@ -26,8 +26,8 @@
       <b>Age: {{ $user->age}}</b> <a class="pull-right"> </a>
     </li>
   </ul>
-  <a href="{{  $user->id . '/edit' }}" class="btn btn-default">edit</a>
-  <a href="{{  $user->id . '/delete' }}" class="btn btn-warning">delete</a>
+  <a href="{{  $user->id . '/edit' }}" class="btn btn-primary">Edit</a>
+  <a href="{{  $user->id . '/delete' }}" class="btn btn-danger">Delete</a>
 </div>
 
 </div>

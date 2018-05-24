@@ -35,7 +35,7 @@
                     <td><h5>{{$skill->updated_at}}</h5></td>
                     <td>
                         <div class="btn-group pull-right">
-                                <a type="button" class="btn btn-sm btn-warning" href="/skills/{{$skill->id}}/edit">
+                                <a type="button" class="btn btn-sm btn-primary" href="/skills/{{$skill->id}}/edit">
                                     <i class="fa fa-pencil"></i>&nbsp;  Edit</a>
                                 {!!Form::open(['action' => ['SkillsController@destroy', $skill->id], 'method' => 'POST', 'class' => 'btn-group pull-right'])!!}
                                     {{Form::hidden('_method', 'DELETE')}}
