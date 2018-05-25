@@ -19,6 +19,9 @@
                         <section class="content-max-width">
                             <section id="boxes">
                                 <p>{{$skills->body}}</p>
+                                <a href="https://nl.wikipedia.org/wiki/HyperText_Markup_Language">Wikipedia</a>
+                                <br>
+                                <a href="https://www.w3schools.com/html/">W3Schools</a>
                             </section>
                         </section>
                     </div>
