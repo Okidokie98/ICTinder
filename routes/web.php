@@ -25,7 +25,7 @@ Route::get('/contactUS', function () {
 Auth::routes();
 
 
-//route voor chatfunctie
+//route voor de chat functie
 Route::get('/chats', 'ChatController@index');
 Route::Post('/createchat', 'ChatController@store');
 Route::get('/createchat', 'ChatController@create');
@@ -44,19 +44,16 @@ Route::get('/profile/{id}', 'HomeController@show');
 Route::get('/profile/{id}/edit', 'HomeController@edit');
 Route::post('/profile/{id}/edit',  array('uses' => 'HomeController@update', 'as' => 'edit.profile'));
 
-//route om de accoutn te verwijderen uit de database
+//route om het account te verwijderen uit de database
 Route::get('/profile/{id}/delete', 'HomeController@delete');
-
-
 Route::delete('/deleted/{id}', array('uses' => 'HomeController@deleted', 'as' => 'delete.profile'));
 
-
+//route om contact op te nemen
 Route::get('/contact', 'ContactController@create')->name('contact.create');
 Route::post('/contact', 'ContactController@store')->name('contact.store');
 
 
 // Creates routes for the skills functions .
 Route::resource('/skills', 'SkillsController');
-
 Route::resource('skilllevels', 'SkillLevelsController');
 
