@@ -30,7 +30,6 @@
 
                         </ul>
 
-
                         <!-- Right Side Of Navbar -->
                         <ul class="navbar-nav ml-auto">
                             <!-- Authentication Links -->
@@ -47,7 +46,7 @@
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
-                                                        document.getElementById('logout-form').submit();">
+                                            document.getElementById('logout-form').submit();">
                                             Logout
                                         </a>
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -58,10 +57,6 @@
                             @endguest
                         </ul>
                     </div>
-                    <main class="py-4">
-                        @include('inc.messages')
-                        @yield('content')
-                    </main>
                 </div>
             </nav>
             <main class="py-4">
@@ -72,7 +67,6 @@
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}"></script>
-
         <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
         <script>
             CKEDITOR.replace('article-ckeditor');
