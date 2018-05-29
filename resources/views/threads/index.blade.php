@@ -3,6 +3,7 @@
 @section('title', 'ICTinder threads')
 
 @section('content')
+    <html lang="en">
     <h1>Threads</h1>
     @if(count($threads) > 0)
         @foreach($threads as $thread)
