@@ -34,7 +34,9 @@ class User extends Authenticatable
 
     static function username($id)
     {
-        $username = User::where('id', $id)->get('name');
-        return $username;
+        $username = User::where('id', $id)->get();
+        // dd($username);
+        $name = $username[0]->name;
+        return $name;
     }
 }

@@ -38,5 +38,9 @@ class matches extends Model
         $studentMatches = matches::where('student_id', $id)->get();
         return $studentMatches;
     }
-    public function 
+    public function test()
+    {
+
+    }
+
 }
