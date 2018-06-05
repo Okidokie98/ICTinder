@@ -27,4 +27,16 @@ class matches extends Model
         return $id;
     }
 
+    static function tutor($id)
+    {
+        $tutorMatches = matches::where('tutor_id', $id)->get();
+        return $tutorMatches;
+    }
+
+    static function student($id)
+    {
+        $studentMatches = matches::where('student_id', $id)->get();
+        return $studentMatches;
+    }
+    public function 
 }

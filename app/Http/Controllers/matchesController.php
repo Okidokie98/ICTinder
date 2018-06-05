@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\skill;
 use App\matches;
+use App\User;
 
 class matchesController extends Controller
 {
@@ -51,7 +52,10 @@ class matchesController extends Controller
      */
     public function show($id)
     {
-        //
+        $Tmatch = matches::tutor($id);
+        $Smatch = matches::student($id);
+        $userMatchId = User::username($Tmatch->id);
+        return view('match.matches', compact('userMatchId','Smatch'));
     }
 
     /**
@@ -62,7 +66,8 @@ class matchesController extends Controller
      */
     public function edit($id)
     {
-        //
+
+   
     }
 
     /**

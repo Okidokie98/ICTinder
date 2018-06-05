@@ -51,6 +51,7 @@ Route::get('/profile/{id}/delete', 'HomeController@delete');
 
 Route::get('/findmatch', 'matchesController@create');
 Route::post('/findmatch', array('uses' => 'matchesController@store', 'as' => 'finding.match'));
+Route::get('/matches/{id}', 'matchesController@show');
 
 Route::delete('/deleted/{id}', array('uses' => 'HomeController@deleted', 'as' => 'delete.profile'));
 

@@ -123,7 +123,12 @@ return [
         ],
 
         [
+            'text' => 'matches',
+            'url'  => 'matches',
+            'icon' => 'heart-o',
+        ],
 
+        [
             'text'        => 'create chat',
             'url'         => 'createchat',
             'icon'        => 'wechat',
@@ -131,17 +136,17 @@ return [
             'label_color' => 'success',
         ],
 
-        [
-            'text'        => 'Skilllevels',
-            'url'         => 'skilllevels',
-            'icon'        => 'code',
-        ],
+        // [
+        //     'text'        => 'Skilllevels',
+        //     'url'         => 'skilllevels',
+        //     'icon'        => 'code',
+        // ],
 
-        [
-            'text'        => 'Add a new skill!',
-            'url'         => 'skilllevels/create',
-            'icon'        => 'code',
-        ],
+        // [
+        //     'text'        => 'Add a new skill!',
+        //     'url'         => 'skilllevels/create',
+        //     'icon'        => 'code',
+        // ],
 
         [
             'text'        => 'Abous Us',
