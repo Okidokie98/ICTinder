@@ -89,8 +89,7 @@ class matchesController extends Controller
         for($i=0;$i<$sCount;$i++){
             $StudentSkillName[$i] = [skill::skillname($Smatch[$i]->skill_id)];
         }
-
-        return view('match.matches', compact('TutorStudentName','StudentTutorName','TutorSkillName', 'StudentSkillName', 'tCount', 'sCount'));
+        return view('match.matches', compact('TutorStudentName','StudentTutorName','TutorSkillName', 'StudentSkillName', 'tCount', 'sCount','id','Tmatch', 'Smatch'));
     }
 
     /**
@@ -125,6 +124,7 @@ class matchesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $delete = matches::where('id', $id)->delete();
+        return redirect()->back();
     }
 }

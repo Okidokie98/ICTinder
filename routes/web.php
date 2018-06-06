@@ -46,15 +46,15 @@ Route::get('/profile/{id}', 'HomeController@show');
 Route::get('/profile/{id}/edit', 'HomeController@edit');
 Route::post('/profile/{id}/edit',  array('uses' => 'HomeController@update', 'as' => 'edit.profile'));
 
-//route om de accoutn te verwijderen uit de database
+//route om de account te verwijderen uit de database
 Route::get('/profile/{id}/delete', 'HomeController@delete');
-
-Route::get('/findmatch/{id}', 'matchesController@create');
-Route::post('/findmatch/{id}', 'matchesController@store')->name('findmatch.store');
-Route::get('/matches/{id}', 'matchesController@show');
-
 Route::delete('/deleted/{id}', array('uses' => 'HomeController@deleted', 'as' => 'delete.profile'));
 
+//matching routes
+Route::get('/findmatch/{id}', 'matchesController@create');
+Route::post('/findmatch/{id}', 'matchesController@store')->name('findmatch.store');
+Route::get('/matches/{id}', 'matchesController@show')->name('match.show');
+Route::delete('/deletematch/{id}', array('uses' => 'matchesController@destroy', 'as' => 'delete.match'));
 
 Route::get('/contact', 'ContactController@create')->name('contact.create');
 Route::post('/contact', 'ContactController@store')->name('contact.store');

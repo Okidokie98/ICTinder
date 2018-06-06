@@ -1,7 +1,7 @@
 <?php
 
 return [
-
+    
     /*
     |--------------------------------------------------------------------------
     | Title
@@ -85,7 +85,7 @@ return [
     |
     */
 
-    'dashboard_url' => '/',
+    'dashboard_url' => '/threads',
 
     'logout_url' => 'logout',
 
@@ -124,7 +124,7 @@ return [
 
         [
             'text' => 'matches',
-            'url'  => 'matches',
+            'url'  => 'matches/1',
             'icon' => 'heart-o',
         ],
 
