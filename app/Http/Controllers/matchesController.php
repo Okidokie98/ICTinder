@@ -24,10 +24,10 @@ class matchesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
         $skills = skill::all();
-        return view('match.newMatch', compact('skills'));
+        return view('match.newMatch', compact('skills', 'id'));
     }
 
     /**
@@ -36,12 +36,21 @@ class matchesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request,$id)
     {
+        //haal het id van de skill 
         $skill_name = request('skill');
-        $skill_id = matches::skills($skill_name);
-        dd($skill_id);
-        return view('match.matches');
+        $skills_id = matches::skills($skill_name);
+        //haal het id van de nieuwe tutor op
+        $tutor_id = matches::findMatch($skills_id, $id);
+
+        //stuur de data door naar de database
+        $match = new matches;
+        $match->tutor_id = $tutor_id;
+        $match->student_id = $id;
+        $match->skill_id = $skills_id;
+        $match->save();
+        return redirect('/matches/'.$id)->with('success', 'we found a match for you');
     }
 
     /**

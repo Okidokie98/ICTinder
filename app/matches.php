@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use App\skill;
+use App\skilllevels;
 
 class matches extends Model
 {
@@ -38,9 +39,16 @@ class matches extends Model
         $studentMatches = matches::where('student_id', $id)->get();
         return $studentMatches;
     }
-    public function test()
+    static function findMatch($skills_id,$id)
     {
 
+        $skillLevel = skilllevels::where([['skill_id', (string)$skills_id],['user_id', $id]])->get();
+        $level = $skillLevel[0]->level;
+        $match = skilllevels::where([['skill_id',$skills_id],['level','>', $level]])->orderBy('level', 'desc')->get();
+        $tutor = $match[0]->user_id;
+        // dd($tutor);
+        // dd($skills_id, $id);
+        return $tutor;
     }
 
 }

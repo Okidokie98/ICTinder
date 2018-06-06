@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-{!! Form::open(['action' => 'matchesController@store', 'method' => 'POST']) !!}
+{!! Form::open(['method' => 'POST','route' => ['findmatch.store',$id]]) !!}
 {{Form::label('Language name', 'Select the skill you want to learn:')}}
 <select class="form-control" name="skill"> 
 @foreach ($skills as $skill)
