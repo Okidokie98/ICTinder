@@ -87,6 +87,7 @@ return [
 
     'dashboard_url' => '/threads',
 
+
     'logout_url' => 'logout',
 
     'logout_method' => null,
@@ -120,6 +121,12 @@ return [
             'text' => 'Forum',
             'url'  => 'threads',
             'icon' => 'commenting',
+        ],
+
+        [
+            'text'        => 'Skills',
+            'url'         => 'skills',
+            'icon'        => 'code',
         ],
 
         [

@@ -14,8 +14,27 @@ class FAQController extends Controller
     public function index()
     {
         return view('faq.index');
+        
     }
 
+    public function indexprivacy()
+    {
+        return view('faq.indexprivacy');
+        
+    }
+
+    public function indexgeneralinfo()
+    {
+        return view('faq.indexgeneralinfo');
+        
+    }
+
+    public function indexinteractions()
+    {
+        return view('faq.indexinteractions');
+        
+    }
+    
     /**
      * Show the form for creating a new resource.
      *

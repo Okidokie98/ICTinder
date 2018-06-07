@@ -25,19 +25,24 @@ Route::get('/contactUS', function () {
 Auth::routes();
 
 
+
 //route voor de chat functie
+
 Route::get('/chats', 'ChatController@index');
 Route::Post('/createchat', 'ChatController@store');
 Route::get('/createchat', 'ChatController@create');
 Route::get('/chats/{chat}', 'ChatController@show');
 
+
 //route voor
+
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/aboutus', 'AboutUsController@index');
 Route::get('/faq', 'FAQController@index');
 
 //route voor het displayen van het profiel van de ingelogde gebruiker
 Route::get('/profile/{id}', 'HomeController@show');
+
 
 
 //route voor het aanpassen van de info in het profiel
@@ -62,5 +67,12 @@ Route::post('/contact', 'ContactController@store')->name('contact.store');
 
 // Creates routes for the skills functions .
 Route::resource('/skills', 'SkillsController');
+
+
 Route::resource('skilllevels', 'SkillLevelsController');
+
+// routes voor de verschillende FAQ pages
+Route::get('/faq-privacy', 'FAQController@indexprivacy');
+Route::get('/faq-generalinfo', 'FAQController@indexgeneralinfo');
+Route::get('/faq-interactions', 'FAQController@indexinteractions');
 
