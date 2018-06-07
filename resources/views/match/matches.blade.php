@@ -41,7 +41,7 @@ tr:nth-child(even) {
 		<td>{{$TutorStudentName[$i][0]}}</td>
 		<td>{{$TutorSkillName[$i][0]}}</td>
 		<td><a href="/createchat">create chat</a></td>
-		<td>{{ Form::open(['route' => ['delete.match', $Tmatch[$i]->id], 'method' => 'delete']) }} <button class="btn btn-default" type="submit">Delete</button> {{ Form::close() }}</td>
+		<td>{{ Form::open(['route' => ['delete.match', $Tmatch[$i]->id], 'method' => 'delete']) }} <button class="btn btn-danger" type="submit">Delete</button> {{ Form::close() }}</td>
 		</tr>
 	@endfor
 </table>
@@ -62,7 +62,7 @@ tr:nth-child(even) {
 		<td>{{$StudentTutorName[$i][0]}}</td>
 		<td>{{$StudentSkillName[$i][0]}}</td>
 		<td><a href="/createchat">create chat</a></td>
-		<td>{{ Form::open(['route' => ['delete.match', $Smatch[$i]->id], 'method' => 'delete']) }} <button class="btn btn-default" type="submit">Delete</button> {{ Form::close() }}</td>
+		<td>{{ Form::open(['route' => ['delete.match', $Smatch[$i]->id], 'method' => 'delete']) }} <button class="btn btn-danger" type="submit">Delete</button> {{ Form::close() }}</td>
 	</tr>
 	@endfor
 </table>

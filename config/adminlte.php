@@ -85,7 +85,7 @@ return [
     |
     */
 
-    'dashboard_url' => '/threads',
+    'dashboard_url' => '/',
 
 
     'logout_url' => 'logout',
