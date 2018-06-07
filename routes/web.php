@@ -15,8 +15,33 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
+Route::get('/overview', function () {
+
+    $chats = [
+        'Brandon',
+        'Rik',
+        'Dennis',
+        'Lesley'
+    ];
+
+
+
+
+    return view('overview', compact('chats'));
+});
+
+Route::get('/createbutton', function () {
+    return view('createbutton');
+});
+
+Route::get('/chat', function () {
+    return view('chat');
+});
 Route::get('/contactUS', function () {
     return view('create');
+
 });
 
 Auth::routes();
