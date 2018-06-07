@@ -47,8 +47,10 @@
       </div>
     </li>
   </ul>
+
   <a href="{{  $user->id . '/edit' }}" class="btn btn-primary">Edit</a>
   <a href="{{  $user->id . '/delete' }}" class="btn btn-danger">Delete</a>
+
 </div>
 
 </div>

@@ -25,6 +25,7 @@
             </tr>
             @foreach($skills as $skill)
                 <tr>
+
                     <td><p><a href="/skills/{{$skill->id}}">{{$skill->skill}}</a></p></td>
                     <td><p>
                     @for($i=1; $i<=$skill->difficulty; $i++)
@@ -36,6 +37,7 @@
                     <td>
                         <div class="btn-group pull-right">
                                 <a type="button" class="btn btn-sm btn-primary" href="/skills/{{$skill->id}}/edit">
+
                                     <i class="fa fa-pencil"></i>&nbsp;  Edit</a>
                                 {!!Form::open(['action' => ['SkillsController@destroy', $skill->id], 'method' => 'POST', 'class' => 'btn-group pull-right'])!!}
                                     {{Form::hidden('_method', 'DELETE')}}

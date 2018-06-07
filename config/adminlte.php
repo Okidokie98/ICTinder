@@ -1,7 +1,7 @@
 <?php
 
 return [
-
+    
     /*
     |--------------------------------------------------------------------------
     | Title
@@ -85,7 +85,8 @@ return [
     |
     */
 
-    'dashboard_url' => '/',
+    'dashboard_url' => '/threads',
+
 
     'logout_url' => 'logout',
 
@@ -123,7 +124,18 @@ return [
         ],
 
         [
+            'text'        => 'Skills',
+            'url'         => 'skills',
+            'icon'        => 'code',
+        ],
 
+        [
+            'text' => 'matches',
+            'url'  => 'matches/1',
+            'icon' => 'heart-o',
+        ],
+
+        [
             'text'        => 'create chat',
             'url'         => 'createchat',
             'icon'        => 'wechat',
@@ -131,11 +143,17 @@ return [
             'label_color' => 'success',
         ],
 
-        [
-            'text'        => 'Skills',
-            'url'         => 'skills',
-            'icon'        => 'code',
-        ],
+        // [
+        //     'text'        => 'Skilllevels',
+        //     'url'         => 'skilllevels',
+        //     'icon'        => 'code',
+        // ],
+
+        // [
+        //     'text'        => 'Add a new skill!',
+        //     'url'         => 'skilllevels/create',
+        //     'icon'        => 'code',
+        // ],
 
         [
             'text'        => 'Abous Us',
