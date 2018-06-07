@@ -4,6 +4,7 @@
 
 @section('content')
 
-<button><a href="overview">Create a new chat</a></button>
+   {{--Shows specific chats--}}
+   <h1>{{ $chat->body }}</h1>
 
 @stop

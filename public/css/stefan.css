@@ -1,0 +1,21 @@
+.language {
+    border-bottom: 1px solid #f39c12;
+}
+
+.more {
+    text-align: center;
+    color: #f39c12;
+}
+
+.textcenter{
+    margin: auto;
+}
+
+.row-full{
+    width: 100vw;
+    position: relative;
+    margin-left: -50vw;
+    height: 100px;
+    margin-top: 100px;
+    left: 50%;
+}

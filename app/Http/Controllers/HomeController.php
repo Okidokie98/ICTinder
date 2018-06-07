@@ -53,6 +53,7 @@ class HomeController extends Controller
 
     public function update($id)
     {
-        var_dump(request('name'));
+        dd(request('name'));
+        return view('profile.EditProfile', compact('ids'));
     }
 }

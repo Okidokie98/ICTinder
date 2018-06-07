@@ -32,4 +32,11 @@ class User extends Authenticatable
         $users = User::where('id', $id)->delete();
     }
 
+    static function username($id)
+    {
+        $username = User::where('id', $id)->get();
+        // dd($username);
+        $name = $username[0]->name;
+        return $name;
+    }
 }
