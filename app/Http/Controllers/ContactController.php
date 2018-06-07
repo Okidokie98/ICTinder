@@ -44,9 +44,12 @@ class ContactController extends Controller
         $contact['msg'] = $request->get('msg');
 
         // Mail delivery logic goes here
-        Mail::to(config('mail.support.address'))->send(new Contact($contact));
+        // Mail::to(config('mail.support.address'))->send(new Contact($contact));
+        Mail::to($request->user())->send(new Contact($contact));
 
         flash('Your message has been sent!')->success();
+
+        
   
 
         return redirect('/');
