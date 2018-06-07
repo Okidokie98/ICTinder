@@ -116,7 +116,7 @@ return [
             
         ],
         [
-            'text' => 'Forum',
+            'text' => 'Threads',
             'url'  => 'threads',
             'icon' => 'commenting',
         ],
