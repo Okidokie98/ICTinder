@@ -15,16 +15,11 @@
                     <form action="/createchat" method="POST">
                         {{csrf_field() }}
 
-
                         <div class="form-group">
-                            <label for="body">Name of the chat</label>
+                            <label>Name of the chat</label>
 
                             <textarea name="body" class="form-control" placeholder="Name"></textarea>
-
                         </div>
-
-
-
                         <input type="submit" class="btn btn-succes pull-right">
                     </form>
 
