@@ -30,9 +30,6 @@ class Contact extends Mailable
      */
     public function build()
     {
-        return $this
-        ->to(config('mail.from.address'))
-        ->subject('ICTinder')
-        ->view('contact.mail');
+        return $this->view('contact.mail');
     }
 }
