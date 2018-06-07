@@ -4,6 +4,8 @@
 
 @section('content')
 
+<html lang="en">
+
     <div class="content-wrapper" style="min-height: 306px;">
         <article>
             <header class="content-header container-fluid">

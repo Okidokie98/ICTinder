@@ -3,6 +3,7 @@
 @section('title', 'AdminLTE')
 
 @section('content')
+
     <h4>Chats:</h4>
     <ul>
 
@@ -10,6 +11,7 @@
 
         @foreach($chats as $chat)
             <li><a href="/chats/{{ $chat->id }}"> {{$chat->body}} </a></li>
+
         @endforeach
 
     </ul>

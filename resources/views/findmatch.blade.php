@@ -26,7 +26,9 @@
   <p class="textcenter">CSS</p>
   </div>
   <div class="box-body more">
+
   <p> class="textcenter">CLICK HERE FOR MORE OPTIONS</p>
+
   </div>
   <!-- /.box-body -->
 </div>
