@@ -2,13 +2,9 @@
 
 @section('title', 'ICTinder threads')
 
-@section('content_header')
-    <h1>Threads</h1>
-@stop
-
 @section('content')
-    <div class="btn btn-default pull-right"><a href="/threads/create">Create Thread</a></div>
-    <br><br>
+    <html lang="en">
+    <h1>Threads</h1>
     @if(count($threads) > 0)
         @foreach($threads as $thread)
             <div class="box">
@@ -20,4 +16,5 @@
     @else
         <p>No threads found.</p>
     @endif
+    <div class="btn btn-default pull-right"><a href="/threads/create">Create Thread</a></div>
 @stop

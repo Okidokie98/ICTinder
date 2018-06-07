@@ -3,6 +3,7 @@
 @section('title', 'ICTinder thread')
 
 @section('content')
+    <html lang="en">
     <h1>{{$thread->subject}}</h1>
     <div>
         <p>{{$thread->body}}</p>
