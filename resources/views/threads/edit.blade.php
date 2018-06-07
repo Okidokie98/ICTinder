@@ -3,6 +3,7 @@
 @section('title', 'ICTinder edit thread')
 
 @section('content')
+    <html lang="en">
     <h1>Edit Thread</h1>
     {!! Form::open(['action' => ['ThreadController@update', $thread->id], 'method' => 'POST']) !!}
         <div class='form-group'>

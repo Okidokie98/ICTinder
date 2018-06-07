@@ -3,6 +3,7 @@
 @section('title', 'ICTinder create thread')
 
 @section('content')
+    <html lang="en">
     <h1>Create Thread</h1>
     {!! Form::open(['action' => 'ThreadController@store', 'method' => 'POST']) !!}
         <div class='form-group'>
