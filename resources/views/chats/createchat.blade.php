@@ -3,12 +3,12 @@
 @section('title', 'AdminLTE')
 
 @section('content')
-
+    <html lang="en">
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    Create chat
+                    <h3>Create a chat</h3>
                 </div>
 
                 <div class="panel-body">
@@ -17,9 +17,10 @@
 
 
                         <div class="form-group">
-                            <label for="body">Content</label>
+                            <label for="body">Name of the chat</label>
 
-                            <textarea name="body" class="form-control"></textarea>
+                            <textarea name="body" class="form-control" placeholder="Name"></textarea>
+
                         </div>
 
 
@@ -31,6 +32,4 @@
             </div>
         </div>
     </div>
-
-
 @stop
