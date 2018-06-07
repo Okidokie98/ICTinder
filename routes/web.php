@@ -62,3 +62,7 @@ Route::resource('/skills', 'SkillsController');
 
 Route::resource('skilllevels', 'SkillLevelsController');
 
+// routes voor de verschillende FAQ pages
+Route::get('/faq-privacy', 'FAQController@indexprivacy');
+Route::get('/faq-generalinfo', 'FAQController@indexgeneralinfo');
+Route::get('/faq-interactions', 'FAQController@indexinteractions');

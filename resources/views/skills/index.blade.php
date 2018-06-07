@@ -25,14 +25,14 @@
             </tr>
             @foreach($skills as $skill)
                 <tr>
-                    <td><h5><a href="/skills/{{$skill->id}}">{{$skill->skill}}</a></h5></td>
-                    <td><h5>
+                    <td><p><a href="/skills/{{$skill->id}}">{{$skill->skill}}</a></p></td>
+                    <td><p>
                     @for($i=1; $i<=$skill->difficulty; $i++)
                         <i class="fa fa-star text-yellow"></i>
                     @endfor
-                    </td></h5>
-                    <td><h5>0</h5></td>
-                    <td><h5>{{$skill->updated_at}}</h5></td>
+                    </td></p>
+                    <td><p>0</p></td>
+                    <td><p>{{$skill->updated_at}}</p></td>
                     <td>
                         <div class="btn-group pull-right">
                                 <a type="button" class="btn btn-sm btn-primary" href="/skills/{{$skill->id}}/edit">

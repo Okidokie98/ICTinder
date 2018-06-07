@@ -25,6 +25,27 @@
     <li class="list-group-item">
       <b>Age: {{ $user->age}}</b> <a class="pull-right"> </a>
     </li>
+    <li>
+    <div class="form-group">
+      {!! Form::label('Tell us your favorite coding languages!') !!}
+      <br />
+      {!! Form::checkbox('html') !!} HTML
+      <br />
+      {!! Form::checkbox('css') !!} CSS
+      <br />
+      {!! Form::checkbox('js') !!} JavaScript
+      <br />
+      {!! Form::checkbox('ts') !!} TypeScript
+      <br />
+      {!! Form::checkbox('php') !!} PHP
+      <br />
+      {!! Form::checkbox('c') !!} C
+      <br />
+      {!! Form::checkbox('c++') !!} C++
+      <br />
+      {!! Form::checkbox('c#') !!} C#
+      </div>
+    </li>
   </ul>
   <a href="{{  $user->id . '/edit' }}" class="btn btn-primary">Edit</a>
   <a href="{{  $user->id . '/delete' }}" class="btn btn-danger">Delete</a>
